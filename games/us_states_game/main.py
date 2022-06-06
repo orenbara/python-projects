@@ -18,6 +18,7 @@ state_series = states_df.state
 states_list = states_df.state.to_list()
 user_guess_list = []
 cancel_pressed = False
+user_exited = False
 while len(user_guess_list) < NUMBER_OF_STATES:
     answer_state = screen.textinput(title=f"{len(user_guess_list)}/{NUMBER_OF_STATES} States Guessed", prompt="What's another state's "
                                                                                               "name?")
@@ -41,6 +42,7 @@ while len(user_guess_list) < NUMBER_OF_STATES:
     elif answer_state in user_guess_list:
         print(f"Already Guessed {answer_state}")
     elif answer_state == "Exit":
+        user_exited = True
         user_name = screen.textinput(title="Missing States", prompt="New CSV with missing states wil be generated, What's your name?")
         missing_states = []
         for state in states_list:
@@ -50,7 +52,7 @@ while len(user_guess_list) < NUMBER_OF_STATES:
         missing_states_df.to_csv(f"{user_name}.csv")
         break
 
-if not cancel_pressed:
+if not cancel_pressed and not user_exited:
     # Winning message
     message = turtle.Turtle()
     message.penup()
@@ -62,5 +64,8 @@ else:
     message.penup()
     message.hideturtle()
     message.goto(-120, 0)
-    message.write("You chose to cancel", font=('Arial', 20, 'normal'))
+    if cancel_pressed:
+      message.write("You chose to cancel", font=('Arial', 20, 'normal'))
+    elif user_exited:
+      message.write("You chose to exit, file was added", font=('Arial', 20, 'normal'))
 screen.mainloop()
