@@ -1,5 +1,8 @@
 # Password Generator
-## This game was built during Python course in Udemy.
+## This tool was built during Python course in Udemy.
+* You can use it to store passwords locally in JSON format.
+* You can search for data
+* You can generate a random password for your records.
 
 # Requirements:
 * I used Python3.10 but it should run on older versions.
