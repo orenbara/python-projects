@@ -1,0 +1,5 @@
+APP_ID = "cb420311"
+API_KEY = "94bc0bd99381f2d72dc26b946f4c3ec8"
+sheety_token_api_authorization_key = "jh8mddAnKMQU"
+sheety_url = "https://api.sheety.co/8616dcc281e810464369b17e1a4b21f1/workoutTracking/workouts"
+nutritionix_url = "https://trackapi.nutritionix.com/v2/natural/exercise"

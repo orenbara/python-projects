@@ -1,0 +1,11 @@
+sheet_inputs = {
+     "workout": {
+         "date": "date",
+         "time": "date",
+         "exercise": "date",
+         "duration": "date",
+         "calories": "date"
+     }
+ }
+
+

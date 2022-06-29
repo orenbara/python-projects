@@ -1,2 +1,3 @@
 # Ignore the .idea directory of Pycharm
 *.idea
+/home/orenb/orenb_personal_github/python-projects/tools/workout_ai_training/env.py
