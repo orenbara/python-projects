@@ -5,3 +5,4 @@
 * Best Kernel Function here is the Linear function.
 
 
+![image](https://github.com/orenbara/python-projects/assets/98653232/3cb614a0-b6c7-4ae6-aca6-d820f7c515bb)
